@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Layth Al Rahal — Cybersecurity Specialist | Network Defense | Melbourne, Australia" />
+  <title>Layth Al Rahal | Cybersecurity Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="scan-overlay" id="scanOverlay" aria-hidden="true">
+    <div class="scan-line"></div>
+    <div class="scan-ui">
+      <span class="scan-label">SYSTEM INITIALISATION</span>
+      <div class="scan-bar"><div class="scan-fill" id="scanFill"></div></div>
+      <span class="scan-status" id="scanStatus">Verifying integrity...</span>
+    </div>
+  </div>
+
+  <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <header class="site-header" id="header">
+    <nav class="nav-bar">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">L.ARAHAL<span class="brand-cursor">_</span></span>
+      </a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certs">Certs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light and dark mode"></button>
+        <a href="https://github.com/SorchyHacker313" class="nav-gh" target="_blank" rel="noopener noreferrer" title="GitHub — SorchyHacker313">GH</a>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="log-panel" aria-label="Simulated activity feed">
+    <div class="log-panel-header">
+      <span class="log-dot"></span>
+      <span>NET_MONITOR</span>
+    </div>
+    <ul class="log-feed" id="logFeed"></ul>
+  </aside>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <p class="hero-tag">MEL · AU · SEC_OPS</p>
+        <h1 class="hero-title">Cybersecurity Specialist <span class="hero-sep">|</span> Network Defense <span class="hero-sep">|</span> System Security</h1>
+        <p class="hero-typing" id="heroTyping"><span id="typingText"></span><span class="cursor-blink" id="typingCursor">▍</span></p>
+        <p class="hero-statement">A disciplined Year 12 student building real-world cybersecurity labs, analysing threats, and developing defensive systems through hands-on experience.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="resume.pdf" class="btn btn-secondary" download="Layth_Al_Rahal_Resume.pdf">Download Resume</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-terminal-wrap">
+        <div class="mini-terminal" id="miniTerminal">
+          <div class="terminal-header">
+            <span class="terminal-dots"><i></i><i></i><i></i></span>
+            <span class="terminal-title">layth@portfolio ~ $</span>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <div class="terminal-line terminal-welcome">Type <kbd>help</kbd> for available commands.</div>
+          </div>
+          <form class="terminal-input-row" id="terminalForm" autocomplete="off">
+            <span class="terminal-prompt">$</span>
+            <input type="text" class="terminal-input" id="terminalInput" spellcheck="false" aria-label="Terminal command" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-header">
+        <span class="section-id">01 // PROFILE</span>
+        <h2>About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="profile-frame">
+            <div class="profile-ring"></div>
+            <img src="images/profile.svg" alt="Layth Al Rahal — network node portrait" width="280" height="280" loading="lazy" class="profile-img" />
+          </div>
+          <p class="about-caption">Hands-on labs · ethical defence · continuous learning</p>
+        </div>
+        <div class="about-card glass-panel">
+          <h3>Layth Al Rahal</h3>
+          <p class="about-role">Cybersecurity Specialist · Melbourne, Victoria, Australia</p>
+          <ul class="about-list">
+            <li><strong>VCE Year 12</strong> plus <strong>Certificate III in ICT</strong> — structured academics with applied technology.</li>
+            <li><strong>Google Cybersecurity Certificate</strong> — foundational professional security training.</li>
+            <li>Learning is <em>practical</em>: isolated lab environments, traffic analysis, and defensive tooling — not slides-only theory.</li>
+            <li>Focus on <strong>defence</strong>, <strong>networking</strong>, and <strong>systems</strong> with consistency and discipline.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-header">
+        <span class="section-id">02 // SYSTEM_METRICS</span>
+        <h2>Skills</h2>
+        <p class="section-lead">Live-style capability panel — defensive tooling and infrastructure.</p>
+      </div>
+      <div class="skills-dashboard">
+        <article class="skill-panel glass-panel">
+          <header class="skill-panel-head">
+            <span class="panel-icon"></span>
+            <h3>Cybersecurity &amp; Networking</h3>
+          </header>
+          <ul class="metric-list">
+            <li><span class="metric-name">Network Security · Wireshark · Nmap</span><div class="metric-bar" data-value="92"><div class="metric-fill"></div></div></li>
+            <li><span class="metric-name">IDS/IPS · Suricata · Wazuh</span><div class="metric-bar" data-value="88"><div class="metric-fill"></div></div></li>
+            <li><span class="metric-name">Incident Detection &amp; Response</span><div class="metric-bar" data-value="85"><div class="metric-fill"></div></div></li>
+            <li><span class="metric-name">Firewalls · Segmentation</span><div class="metric-bar" data-value="90"><div class="metric-fill"></div></div></li>
+          </ul>
+        </article>
+        <article class="skill-panel glass-panel">
+          <header class="skill-panel-head">
+            <span class="panel-icon panel-icon--blue"></span>
+            <h3>Systems &amp; Infrastructure</h3>
+          </header>
+          <ul class="metric-list">
+            <li><span class="metric-name">Linux administration</span><div class="metric-bar" data-value="87"><div class="metric-fill"></div></div></li>
+            <li><span class="metric-name">VirtualBox · VMware</span><div class="metric-bar" data-value="91"><div class="metric-fill"></div></div></li>
+            <li><span class="metric-name">Server deployment (DNS, DHCP, NAT)</span><div class="metric-bar" data-value="84"><div class="metric-fill"></div></div></li>
+          </ul>
+        </article>
+        <article class="skill-panel glass-panel">
+          <header class="skill-panel-head">
+            <span class="panel-icon panel-icon--purple"></span>
+            <h3>Programming &amp; Technical</h3>
+          </header>
+          <ul class="metric-list">
+            <li><span class="metric-name">Python · C++ · JavaScript</span><div class="metric-bar" data-value="82"><div class="metric-fill"></div></div></li>
+            <li><span class="metric-name">PC building · hardware troubleshooting</span><div class="metric-bar" data-value="89"><div class="metric-fill"></div></div></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-header">
+        <span class="section-id">03 // DEPLOYED_SYSTEMS</span>
+        <h2>Projects</h2>
+        <p class="section-lead">Operational modules — hover for telemetry; open for full brief.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card glass-panel" data-project="lab">
+          <div class="project-card-top">
+            <span class="project-sys-id">SYS-01</span>
+            <span class="project-status">ONLINE</span>
+          </div>
+          <h3>Cybersecurity Lab</h3>
+          <p class="project-teaser">Isolated environments · attack/defence scenarios</p>
+          <div class="project-detail">
+            <p>Built isolated environments using VirtualBox and VMware. Simulated attacks and defensive scenarios to understand real attack chains and mitigations.</p>
+          </div>
+          <button type="button" class="project-open" data-open="lab">Open brief ▶</button>
+        </article>
+        <article class="project-card glass-panel" data-project="monitor">
+          <div class="project-card-top">
+            <span class="project-sys-id">SYS-02</span>
+            <span class="project-status">ONLINE</span>
+          </div>
+          <h3>Network Monitoring</h3>
+          <p class="project-teaser">Wireshark · Nmap · Suricata · Wazuh</p>
+          <div class="project-detail">
+            <p>Traffic analysis with Wireshark, network discovery with Nmap, and IDS layers using Suricata and Wazuh for detection-oriented visibility.</p>
+          </div>
+          <button type="button" class="project-open" data-open="monitor">Open brief ▶</button>
+        </article>
+        <article class="project-card glass-panel" data-project="infra">
+          <div class="project-card-top">
+            <span class="project-sys-id">SYS-03</span>
+            <span class="project-status">ONLINE</span>
+          </div>
+          <h3>Server &amp; Infrastructure</h3>
+          <p class="project-teaser">DNS · DHCP · NAT · port forwarding</p>
+          <div class="project-detail">
+            <p>Configured DNS, DHCP, and NAT; port forwarding and reliability-focused uptime practices in lab and home network contexts.</p>
+          </div>
+          <button type="button" class="project-open" data-open="infra">Open brief ▶</button>
+        </article>
+        <article class="project-card glass-panel" data-project="ir">
+          <div class="project-card-top">
+            <span class="project-sys-id">SYS-04</span>
+            <span class="project-status">ONLINE</span>
+          </div>
+          <h3>Incident Response</h3>
+          <p class="project-teaser">Investigation · malware removal · hardening</p>
+          <div class="project-detail">
+            <p>Investigated suspicious activity, performed malware removal, and applied system hardening steps to reduce attack surface.</p>
+          </div>
+          <button type="button" class="project-open" data-open="ir">Open brief ▶</button>
+        </article>
+        <article class="project-card glass-panel project-card--wide" data-project="dev">
+          <div class="project-card-top">
+            <span class="project-sys-id">SYS-05</span>
+            <span class="project-status">ONLINE</span>
+          </div>
+          <h3>Programming &amp; Development</h3>
+          <p class="project-teaser">Python · C++ · JavaScript · small tools &amp; UI</p>
+          <div class="project-detail">
+            <p>Small utilities and experiments in Python, C++, and JavaScript; basic web interfaces, debugging workflows, and automation-minded scripts.</p>
+          </div>
+          <button type="button" class="project-open" data-open="dev">Open brief ▶</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section experience" id="experience">
+      <div class="section-header">
+        <span class="section-id">04 // TIMELINE</span>
+        <h2>Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <article class="timeline-item glass-panel reveal">
+          <span class="timeline-node"></span>
+          <time>2024 — 2026</time>
+          <h3>Ozirq Tiling PTY</h3>
+          <p class="timeline-role">Tiling Assistant &amp; Online Business Manager</p>
+          <ul>
+            <li>Built and deployed company website; developed quote booking system.</li>
+            <li>Supported marketing and digital presence.</li>
+            <li>On-site tiling: tools, materials, workmanship support.</li>
+            <li>Followed OH&amp;S and PPE standards.</li>
+          </ul>
+        </article>
+        <article class="timeline-item glass-panel reveal">
+          <span class="timeline-node"></span>
+          <time>2024 — 2025</time>
+          <h3>Amazon Logistics</h3>
+          <p class="timeline-role">Warehouse Assistant</p>
+          <ul>
+            <li>Picking, packing, and inventory in a high-throughput environment.</li>
+            <li>Accuracy, pace, and teamwork under operational pressure.</li>
+          </ul>
+        </article>
+        <article class="timeline-item glass-panel reveal">
+          <span class="timeline-node"></span>
+          <time>2024</time>
+          <h3>Mirany Waterproof &amp; Tiling</h3>
+          <p class="timeline-role">Tiler Assistant</p>
+          <ul>
+            <li>Site preparation and installation support.</li>
+            <li>Maintained organised, safe workspaces.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section certs" id="certs">
+      <div class="section-header">
+        <span class="section-id">05 // CREDENTIALS</span>
+        <h2>Certifications</h2>
+      </div>
+      <ul class="badge-grid">
+        <li class="cert-badge glass-panel">Google Professional Cybersecurity Certificate</li>
+        <li class="cert-badge glass-panel">Certificate III in ICT</li>
+        <li class="cert-badge glass-panel">Certificate II Workplace Skills</li>
+        <li class="cert-badge glass-panel">Cyber Threat Intelligence 101</li>
+        <li class="cert-badge glass-panel">Wireshark Packet Analysis</li>
+      </ul>
+    </section>
+
+    <section class="section education" id="education">
+      <div class="section-header">
+        <span class="section-id">06 // EDU</span>
+        <h2>Education</h2>
+      </div>
+      <div class="edu-card glass-panel">
+        <h3>Hume Central Secondary College</h3>
+        <p class="edu-level">VCE Year 12</p>
+        <p class="edu-subjects"><strong>Subjects:</strong> ICT, Data Analytics, Physics, Mathematics, English</p>
+      </div>
+    </section>
+
+    <section class="section leadership" id="leadership">
+      <div class="section-header">
+        <span class="section-id">07 // OPS</span>
+        <h2>Leadership &amp; Development</h2>
+      </div>
+      <ul class="leadership-list">
+        <li class="glass-panel reveal">Built personal cybersecurity labs independently.</li>
+        <li class="glass-panel reveal">Assisted peers with IT troubleshooting.</li>
+        <li class="glass-panel reveal">Strong time management across study, work, and technical projects.</li>
+        <li class="glass-panel reveal">Safe@Work certified.</li>
+      </ul>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-header">
+        <span class="section-id">08 // UPLINK</span>
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-direct glass-panel">
+          <p><a href="mailto:layth.alrahal@outlook.com">layth.alrahal@outlook.com</a></p>
+          <p><a href="tel:+61411173106">+61 411 173 106</a></p>
+          <p><a href="https://www.linkedin.com/in/layth-al-rahal-966bb1257" target="_blank" rel="noopener noreferrer">LinkedIn — Layth Al Rahal</a></p>
+          <p class="contact-closing">Open to entry-level IT and cybersecurity opportunities. Ready to work, learn, and prove value.</p>
+        </div>
+        <form class="contact-form glass-panel" id="contactForm" action="https://formspree.io/f/mvzdpzdl" method="POST">
+          <input type="hidden" name="_subject" value="[Portfolio] Contact — Layth Al Rahal" />
+          <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <label>Name<input type="text" name="name" required autocomplete="name" /></label>
+          <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+          <label>Message<textarea name="message" rows="4" required></textarea></label>
+          <button type="submit" class="btn btn-primary btn-full" id="contactSubmit">Send message</button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Layth Al Rahal · Cybersecurity Specialist · Melbourne, AU</p>
+    <p class="footer-sub">Ethical defence · lab-built · systems-first</p>
+  </footer>
+
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-label="Project technical brief">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel glass-panel">
+      <button type="button" class="modal-close" data-close-modal aria-label="Close">&times;</button>
+      <pre class="modal-terminal" id="modalTerminal"></pre>
+    </div>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

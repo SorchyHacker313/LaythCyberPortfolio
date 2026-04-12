@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="280" height="280">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00e8a8"/>
+      <stop offset="50%" style="stop-color:#2ec4ff"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="280" fill="#0a0c12"/>
+  <circle cx="140" cy="118" r="48" fill="none" stroke="url(#g)" stroke-width="2" opacity="0.9"/>
+  <circle cx="140" cy="118" r="8" fill="#00e8a8" opacity="0.85"/>
+  <line x1="140" y1="126" x2="100" y2="200" stroke="url(#g)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="140" y1="126" x2="180" y2="190" stroke="url(#g)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="100" y1="200" x2="70" y2="230" stroke="#2ec4ff" stroke-width="1" opacity="0.45"/>
+  <line x1="180" y1="190" x2="210" y2="220" stroke="#a78bfa" stroke-width="1" opacity="0.45"/>
+  <text x="140" y="258" text-anchor="middle" fill="#8b92a8" font-family="system-ui,sans-serif" font-size="11" letter-spacing="0.2em">SEC NODE</text>
+</svg>
